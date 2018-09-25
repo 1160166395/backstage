@@ -1,6 +1,5 @@
 <template>
-    <div class="home">
-        <mt-search v-model="keyword"></mt-search>
+    <div class="login">
     </div>
 </template>
 <script>

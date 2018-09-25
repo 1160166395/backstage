@@ -9,15 +9,10 @@ export default {
   name: 'App'
 }
 </script>
-import Vue from 'vue';
-import ElementUI from 'element-ui';
-Vue.use(ElementUI);
-import 'element-ui/lib/theme-chalk/index.css';
 import axios from 'axios';
 Vue.use(axios);
 
 Vue.prototype.$axios = axios;
-//import '@/sass/base.scss';
 
 <style>
 #app {

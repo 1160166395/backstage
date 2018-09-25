@@ -1,6 +1,6 @@
 <template>
     <div class="home">
-        <mt-search v-model="keyword"></mt-search>
+        2
     </div>
 </template>
 <script>
