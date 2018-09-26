@@ -7,6 +7,9 @@ import App from './App'
 import router from './router';
 import '@/sass/index.scss';
 Vue.use(ElementUI);
+import axios from 'axios';
+Vue.use(axios);
+Vue.prototype.$axios = axios;
 
 Vue.config.productionTip = false
 
