@@ -17,7 +17,7 @@
             >
         </el-input>
         <el-row>
-            <el-button type="primary">登录</el-button>
+            <el-button type="primary" plain>登录</el-button>
         </el-row>
         <el-radio-group v-model="radio2">
             <el-checkbox v-model="checked">记住密码</el-checkbox>
@@ -37,7 +37,26 @@
             }
         },
         methods: {
-            
+            getMysql(){
+				// this.$loading.open();
+				this.$axios.post('../libs/app',{
+				
+				}).then(res=>{
+					let data = res.data;
+					console.log(data);
+
+					this.datalist = data.subjects;
+
+					this.items = data.subjects.slice(0).sort((a,b)=>{
+						return a.collect_count-b.collect_count
+					}).slice(0,3);
+
+					// this.$loading.close();
+
+
+
+				});
+			}
         },
         created(){
             
@@ -46,12 +65,8 @@
 </script>
 <style scoped>
     .login{
-        padding-top: 50px; 
         width: 735px;
         height: 430px;
-        /* border: 1px solid rgb(196, 192, 192); */
-        margin: auto;
-        margin-top:100px;
         margin: auto;
         position: absolute;
         top: 0;
