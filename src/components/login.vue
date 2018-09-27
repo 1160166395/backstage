@@ -73,6 +73,7 @@
         left: 0;
         right: 0;
         bottom: 0;
+        text-align:center;
     }
     .login h1 img{
         width: 100px;
